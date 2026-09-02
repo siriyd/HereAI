@@ -57,19 +57,21 @@ def style_base_layout():
                 padding-top:1.5rem !important;    
             }
 
-            h1 {
+            h1, h1 span{
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 3.5rem !important;
-                line-height:1.1 1important;
+                line-height:1.1 !important;
                 margin-bottom:0rem !important;
+                color: #1E1B4B !important;
             }
                 
 
-            h2 {
+            h2, h2 span{
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 2rem !important;
                 line-height:0.9 !important;
                 margin-bottom:0rem !important;
+                color: #1E1B4B !important;
             }
                 
             h3, h4, p {
