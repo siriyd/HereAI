@@ -1,3 +1,5 @@
+streamlit
+
 numpy
 pandas
 
@@ -13,4 +15,5 @@ bcrypt # hasing
 segno # qr code
 pillow # image preprocessing
 
-streamlit
+librosa
+resemblyzer

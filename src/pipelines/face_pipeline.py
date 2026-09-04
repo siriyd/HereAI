@@ -2,6 +2,8 @@ import dlib
 import numpy as np
 import face_recognition_models
 from sklearn.svm import SVC
+from sklearn.calibration import CalibratedClassifierCV
+
 import streamlit as st
 
 from src.database.db import get_all_students
@@ -48,7 +50,9 @@ def get_trained_model():
     clf = None
 
     if len(unique_classes) >= 2:
-        clf = SVC(kernel='linear', probability=True, class_weight='balanced')
+        # clf = SVC(kernel='linear', probability=True, class_weight='balanced')
+        base_clf = SVC(probability=False , kernel='linear', class_weight='balanced')  # no longer need probability=True here
+        clf = CalibratedClassifierCV(base_clf, ensemble=False)
         try:
             clf.fit(X, y)
         except ValueError:

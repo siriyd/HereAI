@@ -108,6 +108,11 @@ def style_base_layout():
 
             button:hover{
                 transform :scale(1.05)}
+
+            [data-testid="stHeading"] h3 {
+            text-align: center;
+            color: black !important;
+            }
         </style>  
 
                 """
