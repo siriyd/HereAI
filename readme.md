@@ -4,6 +4,10 @@ HereAI is an AI-powered attendance tracker for classrooms. It gives students and
 
 The application is built as a Streamlit web app. Supabase stores users, subjects, enrollments, biometric embeddings, and attendance logs.
 
+## 🚀 Live Demo
+
+👉 [Try the Live App](https://hereai-main.streamlit.app/)
+
 ## Features
 
 ### Student portal
