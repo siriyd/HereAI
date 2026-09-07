@@ -1,0 +1,15 @@
+name: Keep Streamlit App Alive
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every 3 days to keep the app active
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # Allows you to manually trigger the ping from GitHub's UI for testing
+
+jobs:
+  ping-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Streamlit URL
+        run: |
+          curl -s https://YOUR-APP-URL.streamlit.app > /dev/null
